@@ -57,7 +57,7 @@ CREATE TYPE transaction AS ENUM('deposit','withdraw');
 CREATE TABLE "transactions" (
     "id" SERIAL NOT NULL PRIMARY KEY,
     "bankAccountId" INTEGER NOT NULL,
-    "amount" REAL NOT NULL
+    "amount" REAL NOT NULL,
     "type" TRANSACTION,
     "time" TIMESTAMP NOT NULL DEFAULT GETDATE(),
     "description" TEXT NOT NULL,
